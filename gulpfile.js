@@ -3,7 +3,8 @@ var   gulp = require('gulp'),
       livereload = require('gulp-livereload'),
       connect = require('gulp-connect'),
       path = require('path'),
-      less = require('gulp-less');
+      less = require('gulp-less'),
+      rigger = require('gulp-rigger');
 
 // for livereload pipe
 gulp.task('connect', function() {
