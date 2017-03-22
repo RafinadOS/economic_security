@@ -78,6 +78,31 @@ html,body {
 	}
 }
 
+.section {
+	clear: both;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&--main {
+		height: 500px;
+		background-image: url('../images/main-bg.jpg');
+		border-top: 7px solid #bfc7dc;
+		border-bottom: 7px solid #bfc7dc;
+	}
+	&--content {
+		padding: 70px 0 50px 0;
+		background: #f5f7f9;
+		margin: 0 0 70px 0;
+	}
+	&--news {
+		padding: 70px 0 85px 0;
+		background: #f5f7f9;
+		border-top: 20px solid #eceff5;
+	}
+}
 
 header {
 	display: block;
@@ -238,25 +263,6 @@ header {
 	}
 }
 
-.section {
-	clear: both;
-	display: block;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	&--main {
-		height: 500px;
-		background-image: url('../images/main-bg.jpg');
-		border-top: 7px solid #bfc7dc;
-		border-bottom: 7px solid #bfc7dc;
-	}
-	&--content {
-		padding: 70px 0 50px 0;
-		background: #f5f7f9;
-		margin: 0 0 70px 0;
-	}
-}
-
 .content {
 	& p {
 		font-size: 14px;
@@ -403,4 +409,32 @@ footer {
 		line-height: 24px;
 		margin: 0 !important;
 	}
+}
+
+// twitter widget styles
+
+.twitter {
+	display: inline-block;
+	position: relative;
+	background: #fff;
+	padding: 20px 80px 20px 10px;
+	.radius(4px);
+	&:after {
+		content: '';
+		position: absolute;
+		width: 520px;
+		height: 520px;
+		background: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20291.319%20291.319%22%3E%3Cpath%20fill%3D%22%23dbeef8%22%20d%3D%22M145.659%2C0c80.45%2C0%2C145.66%2C65.219%2C145.66%2C145.66c0%2C80.45-65.21%2C145.659-145.66%2C145.659%0D%0A%09%09S0%2C226.109%2C0%2C145.66C0%2C65.219%2C65.21%2C0%2C145.659%2C0z%22/%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M236.724%2C98.129c-6.363%2C2.749-13.21%2C4.597-20.392%2C6.43c7.338-4.27%2C12.964-11.016%2C15.613-19.072%0D%0A%09%09c-6.864%2C3.96-14.457%2C6.828-22.55%2C8.366c-6.473-6.691-15.695-10.87-25.909-10.87c-19.591%2C0-35.486%2C15.413-35.486%2C34.439%0D%0A%09%09c0%2C2.704%2C0.31%2C5.335%2C0.919%2C7.857c-29.496-1.438-55.66-15.158-73.157-35.996c-3.059%2C5.089-4.807%2C10.997-4.807%2C17.315%0D%0A%09%09c0%2C11.944%2C6.263%2C22.504%2C15.786%2C28.668c-5.826-0.182-11.289-1.721-16.086-4.315v0.437c0%2C16.696%2C12.235%2C30.616%2C28.476%2C33.784%0D%0A%09%09c-2.977%2C0.783-6.109%2C1.211-9.35%2C1.211c-2.285%2C0-4.506-0.209-6.673-0.619c4.515%2C13.692%2C17.625%2C23.651%2C33.165%2C23.925%0D%0A%09%09c-12.153%2C9.249-27.457%2C14.748-44.089%2C14.748c-2.868%2C0-5.69-0.164-8.476-0.482c15.722%2C9.777%2C34.367%2C15.485%2C54.422%2C15.485%0D%0A%09%09c65.292%2C0%2C100.997-52.51%2C100.997-98.029l-0.1-4.461C225.945%2C111.111%2C231.963%2C105.048%2C236.724%2C98.129z%22/%3E%3C/svg%3E%0D%0A');
+		.radius(50%);
+		top: 50%;
+		left: 750px;
+		border: 20px solid #f5f7f9;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+.twitter-timeline {
+	font-size: 10px !important;
 }
