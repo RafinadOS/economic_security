@@ -851,6 +851,9 @@ footer {
   .section--services .h2 {
     margin: 0 0 35px 0;
   }
+  .section--news .h2 {
+    margin: 0 0 35px 0;
+  }
   .logo {
     font-size: 0;
     margin: 30px 0 0 0;
