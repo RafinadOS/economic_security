@@ -44,7 +44,7 @@ h1, h2, h3 {
 	font-weight: lighter;
 	margin: 0 0 18px 0;
 }
-h3 { font-size: 36px }
+h3 { font-size: 39px }
 
 a {
 	color: @linkColor;
@@ -82,7 +82,7 @@ html,body {
 	clear: both;
 	display: block;
 	width: 100%;
-	overflow: hidden;
+	position: relative;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -92,18 +92,31 @@ html,body {
 		border-top: 7px solid #bfc7dc;
 		border-bottom: 7px solid #bfc7dc;
 	}
+	&--inner-page {
+		height: 235px;
+		margin: 0 0 65px 0;
+	}
 	&--content {
 		padding: 70px 0 50px 0;
 		background: #f5f7f9;
+		&-inner {
+			padding: 0;
+		}
 	}
 	&--services {
 		padding: 70px 0 0 0;
 	}
 	&--news {
+		overflow: hidden;
 		padding: 70px 0 85px 0;
 		background: #f5f7f9;
 		border-top: 20px solid #eceff5;
 	}
+}
+
+.title-center {
+	text-align: center;
+	margin: 0 0 55px 0;
 }
 
 header {
@@ -237,6 +250,8 @@ header {
 	font-size: 25px;
 	color: #000;
 	font-weight: bold;
+	position: relative;
+	z-index: 9;
 	&:hover {
 		text-decoration: none;
 		color: #000;
@@ -547,6 +562,7 @@ footer {
 	position: relative;
 	background: #fff;
 	padding: 20px 80px 20px 10px;
+	position: relative;
 	.radius(4px);
 	& > iframe {
 		position: relative !important;
@@ -569,5 +585,70 @@ footer {
 	}
 }
 
+.page-logo {
+	position: absolute;
+	width: 230px;
+	height: 230px;
+	background: #fff;
+	bottom: -85px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	.radius(50%);
+}
+
+.contact {
+	.clear();
+	padding: 0 0 100px 0;
+	&__form {
+		float: left;
+		max-width: 380px;
+		overflow: hidden;
+	}
+	&__input {
+		display: block;
+		width: 100%;
+		min-width: 380px;
+		overflow: hidden;
+		background: #fff;
+		border: 1px solid #d2d2d2;
+		height: 47px;
+		margin: 0 0 21px 0;
+		padding: 0 18px;
+		font-family: @Electra;
+		font-weight: lighter;
+		font-size: 14px;
+		.radius(1px);
+	}
+	&__textarea {
+		display: block;
+		width: 100%;
+		min-width: 380px;
+		overflow: hidden;
+		background: #fff;
+		border: 1px solid #d2d2d2;
+		height: 190px;
+		margin: 0 0 21px 0;
+		padding: 15px 18px;
+		font-family: @Electra;
+		font-weight: lighter;
+		font-size: 14px;
+		resize: none;
+		.radius(1px);
+	}
+	&__map {
+		float: right;
+		overflow: hidden;
+		max-width: 560px;
+		font-size: 16px;
+		line-height: 27px;
+	}
+}
+
+.ya_map {
+	.clear();
+	margin: 0 0 25px 0;
+}
 
 @import "_media.less";

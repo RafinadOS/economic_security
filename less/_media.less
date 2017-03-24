@@ -7,8 +7,50 @@
 @linkColor: 	#0065b1;
 @textColor: 	#000;
 
+@media(max-width: 980px) {
+	.wrapper {
+		width: auto;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+
+	.contact {
+		&__form {
+			width: 30%;
+		}
+		&__map {
+			width: 65%;
+		}
+		&__input, &__textarea {
+			width: 100%;
+			min-width: none;
+		}
+	}
+}
 
 @media(max-width: @tablet) {
+	.contact {
+		&__form {
+			clear: both;
+			float: none;
+			width: 100%;
+			max-width: auto;
+		}
+		&__map {
+			clear: both;
+			float: none;
+			width: 100%;
+			max-width: auto;
+		}
+		&__input, &__textarea {
+			width: 100%;
+			min-width: auto;
+		}
+	}
+	.page-logo {
+		display: none;
+	}
+
 	.wrapper {
 		width: auto;
 		padding-right: 30px;
@@ -184,6 +226,7 @@
 			}
 		}
 		&--news {
+			padding: 35px 0 0 0;
 			& .h2 {
 				margin: 0 0 35px 0;
 			}

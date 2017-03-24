@@ -2,8 +2,8 @@ window.onload = function(){
 	
 	var bodyWidth = document.body.offsetWidth;
 
-	function setTwitterStyle(id) {
-		var frameContent = document.getElementById(id).contentWindow.document;
+	function setTwitterStyle() {
+		frameContent = document.getElementById('twitter-widget-0').contentWindow.document;
 		if (frameContent !== null) 
 		{
 			var frameBlockBg = frameContent.querySelector('.timeline-Widget');
@@ -31,6 +31,5 @@ window.onload = function(){
 		slideMenu()
 	}
 
-	setTwitterStyle('twitter-widget-0'), 500;
 	window.addEventListener('resize', slideMenu, false);
 }

@@ -179,7 +179,7 @@ h3 {
   margin: 0 0 18px 0;
 }
 h3 {
-  font-size: 36px;
+  font-size: 39px;
 }
 a {
   color: #0065b1;
@@ -215,7 +215,7 @@ body {
   clear: both;
   display: block;
   width: 100%;
-  overflow: hidden;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -226,17 +226,29 @@ body {
   border-top: 7px solid #bfc7dc;
   border-bottom: 7px solid #bfc7dc;
 }
+.section--inner-page {
+  height: 235px;
+  margin: 0 0 65px 0;
+}
 .section--content {
   padding: 70px 0 50px 0;
   background: #f5f7f9;
+}
+.section--content-inner {
+  padding: 0;
 }
 .section--services {
   padding: 70px 0 0 0;
 }
 .section--news {
+  overflow: hidden;
   padding: 70px 0 85px 0;
   background: #f5f7f9;
   border-top: 20px solid #eceff5;
+}
+.title-center {
+  text-align: center;
+  margin: 0 0 55px 0;
 }
 header {
   display: block;
@@ -377,6 +389,8 @@ header {
   font-size: 25px;
   color: #000;
   font-weight: bold;
+  position: relative;
+  z-index: 9;
 }
 .logo:hover {
   text-decoration: none;
@@ -673,9 +687,9 @@ footer {
 }
 .twitter {
   display: inline-block;
-  position: relative;
   background: #fff;
   padding: 20px 80px 20px 10px;
+  position: relative;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -701,7 +715,118 @@ footer {
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.page-logo {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: #fff;
+  bottom: -85px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.contact {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  padding: 0 0 100px 0;
+}
+.contact__form {
+  float: left;
+  max-width: 380px;
+  overflow: hidden;
+}
+.contact__input {
+  display: block;
+  width: 100%;
+  min-width: 380px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #d2d2d2;
+  height: 47px;
+  margin: 0 0 21px 0;
+  padding: 0 18px;
+  font-family: 'ElektraPro';
+  font-weight: lighter;
+  font-size: 14px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.contact__textarea {
+  display: block;
+  width: 100%;
+  min-width: 380px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #d2d2d2;
+  height: 190px;
+  margin: 0 0 21px 0;
+  padding: 15px 18px;
+  font-family: 'ElektraPro';
+  font-weight: lighter;
+  font-size: 14px;
+  resize: none;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.contact__map {
+  float: right;
+  overflow: hidden;
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 27px;
+}
+.ya_map {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 25px 0;
+}
+@media (max-width: 980px) {
+  .wrapper {
+    width: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .contact__form {
+    width: 30%;
+  }
+  .contact__map {
+    width: 65%;
+  }
+  .contact__input,
+  .contact__textarea {
+    width: 100%;
+    min-width: none;
+  }
+}
 @media (max-width: 780px) {
+  .contact__form {
+    clear: both;
+    float: none;
+    width: 100%;
+    max-width: auto;
+  }
+  .contact__map {
+    clear: both;
+    float: none;
+    width: 100%;
+    max-width: auto;
+  }
+  .contact__input,
+  .contact__textarea {
+    width: 100%;
+    min-width: auto;
+  }
+  .page-logo {
+    display: none;
+  }
   .wrapper {
     width: auto;
     padding-right: 30px;
@@ -850,6 +975,9 @@ footer {
   }
   .section--services .h2 {
     margin: 0 0 35px 0;
+  }
+  .section--news {
+    padding: 35px 0 0 0;
   }
   .section--news .h2 {
     margin: 0 0 35px 0;
